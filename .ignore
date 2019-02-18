@@ -1,9 +1,0 @@
-test.py
-.idea
-
-YXSite/index
-YXSite/db.sqlite3
-YXSite/manage.py
-YXSite/YXSite/*.py
-
-

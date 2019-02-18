@@ -1,0 +1,18 @@
+#test file
+test.py
+
+#pycharm
+.idea
+
+#index app
+YXSite/index
+
+#django objects
+YXSite/db.sqlite3
+YXSite/manage.py
+YXSite/YXSite/*.py
+!YXSite/YXSite/__init__.py
+
+#python cache
+**/__pycache__
+
