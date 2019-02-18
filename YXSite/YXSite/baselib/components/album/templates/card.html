@@ -1,0 +1,18 @@
+<div class="col-md-4">
+  <div class="card mb-4 box-shadow">
+    <img class="card-img-top" src="{{ img.url }}" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text={{ img.title }}" alt="{{ img.alt }}">
+    <div class="card-body">
+      <p class="card-text">{{ desc }}</p>
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="btn-group">
+          {% for button_info in buttons %}
+            <a href="{{ button_info.url }}">
+              <button type='button' class="btn btn-sm btn-outline-secondary">{{ button_info.title }}</button>
+            </a>
+          {% endfor %}
+        </div>
+        <small class="text-muted">{{ flag }}</small>
+      </div>
+    </div>
+  </div>
+</div>
