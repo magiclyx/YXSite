@@ -11,8 +11,9 @@ YXSite/index
 YXSite/db.sqlite3
 YXSite/manage.py
 YXSite/YXSite/*.py
+YXSite/YXSite/templates
 !YXSite/YXSite/__init__.py
 
 #python cache
 **/__pycache__
-
+*.py[cod]
