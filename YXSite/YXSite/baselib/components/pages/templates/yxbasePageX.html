@@ -1,0 +1,32 @@
+{% extends "yxbaseH5.html" %}
+
+{% block baseH5_title %}
+    yxsite title
+    {% load staticfiles %}
+    <link href="{% static "css/album.css" %}" rel="stylesheet">
+{% endblock %}
+
+{% block baseH5_body %}
+
+    {% block page_navigation %}
+    {% endblock %}
+
+    <main role="main">
+
+      {% block page_title %}
+      {% endblock %}
+
+      <div class="album py-5 bg-light">
+        <div class="container">
+          {% block page_body %}
+          {% endblock %}
+        </div>
+      </div>
+
+    </main>
+
+    {% block page_footer %}
+    {% endblock %}
+
+    <script src="{% static "js/holder.min.js" %}"></script>
+{% endblock %}
