@@ -1,0 +1,61 @@
+{% extends "yxbaseH5.html" %}
+
+
+{% block baseH5_load %}
+    <style>
+        * {
+            line-height: 1.2;
+            margin: 0;
+        }
+        html {
+            color: #888;
+            display: table;
+            font-family: sans-serif;
+            height: 100%;
+            text-align: center;
+            width: 100%;
+        }
+        body {
+            display: table-cell;
+            vertical-align: middle;
+            margin: 2em auto;
+        }
+        h1 {
+            margin: 0;
+            color: #555;
+            font-size: 2em;
+            font-family: sans-serif;
+            font-weight: 400;
+            text-align: center;
+        }
+        p {
+            margin: 0 auto;
+            color: #888;
+            font-family: sans-serif;
+            text-align: center;
+            width: 280px;
+        }
+        @media only screen and (max-width: 280px) {
+            body, p {
+                width: 95%;
+            }
+            h1 {
+                font-size: 1.5em;
+                margin: 0 0 0.3em;
+            }
+        }
+    </style>
+{% endblock %}
+
+{% block baseH5_title %}
+    {% block base404_title %}
+    {{ title }}
+    {% endblock %}
+{% endblock %}
+
+{% block baseH5_body %}
+    {% block base404_body %}
+        <h1>{{ header }}</h1>
+        <p>{{ description }}</p>
+    {% endblock %}
+{% endblock %}
