@@ -8,11 +8,12 @@ test.py
 YXSite/index
 
 #django objects
-YXSite/db.sqlite3
-YXSite/manage.py
-YXSite/YXSite/*.py
-YXSite/YXSite/templates
-!YXSite/YXSite/__init__.py
+YXSite/logs/*.log
+#YXSite/db.sqlite3
+#YXSite/manage.py
+#YXSite/YXSite/*.py
+#YXSite/YXSite/templates
+#!YXSite/YXSite/__init__.py
 
 #python cache
 **/__pycache__

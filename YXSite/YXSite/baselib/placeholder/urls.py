@@ -15,10 +15,12 @@ Including another URLconf
 """
 from django.urls import path
 from django.urls import path, include, re_path
-from . import views
 
+from .views import image_placeholder, doc
+from django.urls import path, include, re_path
 
 urlpatterns = [
-    path('doc/icons/', include('YXSite.baselib.components.icons.urls')),
-    path('placeholder/', include('YXSite.baselib.placeholder.urls'))
+    path('doc', doc),
+    re_path(r'^image/(?P<width>[0-9]+)x(?P<height>[0-9]+)/$', image_placeholder, name='placeholder'),
+    re_path(r'^.*$', doc),
 ]

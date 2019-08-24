@@ -48,5 +48,3 @@ def index_card(parser, token):
 
 register.tag('index_card', index_card)
 
-
-print('inner lalalal')

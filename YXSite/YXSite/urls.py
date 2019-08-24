@@ -1,0 +1,42 @@
+"""YXSite URL Configuration
+
+The `urlpatterns` list routes URLs to views. For more information please see:
+    https://docs.djangoproject.com/en/2.1/topics/http/urls/
+Examples:
+Function views
+    1. Add an import:  from my_app import views
+    2. Add a URL to urlpatterns:  path('', views.home, name='home')
+Class-based views
+    1. Add an import:  from other_app.views import Home
+    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
+Including another URLconf
+    1. Import the include() function: from django.urls import include, path
+    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
+"""
+from django.contrib import admin
+from django.urls import path, include, re_path
+from django.contrib.staticfiles.views import serve
+# from . import views
+
+from django.views.generic.base import TemplateView
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+
+    path('', include('index.urls')),
+    path('index', include('index.urls')),
+    path('favicon.ico', serve, {'path': 'img/favicon.ico'}),
+
+    path('baselib/', include('YXSite.baselib.urls')),
+
+    # custom file
+    re_path(r'^robots\.txt$', TemplateView.as_view(template_name='robots.txt', content_type='text/plain')),
+    re_path(r'^humans\.txt$', TemplateView.as_view(template_name='humans.txt', content_type='text/plain')),
+    re_path(r'^crossdomain\.xml$', TemplateView.as_view(template_name='crossdomain.xml', content_type='text/xml')),
+]
+
+handler404 = "YXSite.baselib.components.pages.errors.handle404"
+handler500 = "YXSite.baselib.components.pages.errors.handle500"
+
+
+
