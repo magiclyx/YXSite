@@ -28,7 +28,7 @@ print('BASE_DIR={}'.format(BASE_DIR))
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = '-3%-jj8c$o-r0t)svgd)d(w#&-t@=f($8^#xw4r&fla$51*zui'
 SECRET_KEY = os.environ.get('SECRET_KEY', os.urandom(32))
-print('SCRET_KEY'.format(SECRET_KEY))
+print('SECRET_KEY'.format(SECRET_KEY))
 
 # ALLOWED_HOSTS = []
 ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'localhost').split(',')
