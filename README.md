@@ -12,6 +12,9 @@ Currently only supports bootstrap4 with **YXSite.baselib.bootstrap.v4**
 ### YXSite.baselib.components
 The Basic component apps package:
 
-- .pages : templates for all html 5 pages
+- .pages : templates for all html5 pages
 - .icons : font icons. Includes glyphicon, openiconis and Font-Awesome
 - .album : An app for quickly generating album walls area
+- .placeholder: Crete a placeholder image of a given width and height (baselib/placeholder/image/50X50)
+- .builder: A build tool for website. (expand the template, compress the css and js, fast design H5 protype)
+
