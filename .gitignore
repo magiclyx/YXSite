@@ -9,6 +9,7 @@ YXSite/index
 
 #django objects
 YXSite/logs/*.log
+YXSite/build/*
 #YXSite/db.sqlite3
 #YXSite/manage.py
 #YXSite/YXSite/*.py

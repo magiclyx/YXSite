@@ -15,11 +15,14 @@ Including another URLconf
 """
 from django.urls import path
 from django.urls import path, include, re_path
-from . import views
 
+from django.urls import path, include, re_path
+from .views import page
 
 urlpatterns = [
-    path('doc/icons/', include('YXSite.baselib.components.icons.urls')),
-    path('placeholder/', include('YXSite.baselib.placeholder.urls')),
-    path('staticsite/', include('YXSite.baselib.builder.urls')),
+    re_path(r'^(?P<slug>[\w./-]+)/$', page, name='page'),
+    re_path(r'^$', page, name='homepage'),
+    #path('doc', doc),
+    #re_path(r'^image/(?P<width>[0-9]+)x(?P<height>[0-9]+)/$', image_placeholder, name='placeholder'),
+    #re_path(r'^.*$', doc),
 ]

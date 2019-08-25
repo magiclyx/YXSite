@@ -48,6 +48,8 @@ INSTALLED_APPS = [
     'YXSite.baselib.components.icons',
     'YXSite.baselib.components.album',
     'YXSite.baselib.placeholder',
+    'YXSite.baselib.builder',
+    'compressor',  # django-compressor support
     'index',
 ]
 
@@ -135,9 +137,23 @@ USE_L10N = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
+BUILD_ROOT = os.path.join(os.path.expanduser('~/Desktop'), 'web_build')
+
 STATIC_URL = '/static/'
-#STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BUILD_ROOT, 'static')
 STATICFILES_DIRS = [
     # os.path.join(BASE_DIR, 'YXSite/static'),
     #os.path.join(BASE_DIR, 'static'),
 ]
+
+SITE_PAGES_DIRECTORY = os.path.join(BASE_DIR, 'pages')
+SITE_OUTPUT_DIRECTORY = BUILD_ROOT
+
+#STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.CachedStaticFilesStorage'
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'compressor.finders.CompressorFinder',
+)
+
+
