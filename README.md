@@ -16,5 +16,5 @@ The Basic component apps package:
 - .icons : font icons. Includes glyphicon, openiconis and Font-Awesome
 - .album : An app for quickly generating album walls area
 - .placeholder: Crete a placeholder image of a given width and height (baselib/placeholder/image/50X50)
-- .builder: A build tool for website. (expand the template, compress the css and js, fast design H5 protype)
+- .builder: A build tool for website. (add build command in manage.py, pre-expand the template to html, compress the css and js, fast design H5 protype)
 
